@@ -167,7 +167,7 @@ Interest::wireDecode(const Block& wire)
     m_forwardingHint = DelegationList();
   }
 
-　//Function
+  //Function
   m_functionName.wireDecode(m_wire.get(tlv::FunctionName));
 }
 

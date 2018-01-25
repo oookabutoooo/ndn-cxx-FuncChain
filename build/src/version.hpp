@@ -54,7 +54,7 @@ namespace ndn {
  *
  * Example, 0.1.0-rc1-1-g5c86570
  */
-#define NDN_CXX_VERSION_BUILD_STRING "0.6.0"
+#define NDN_CXX_VERSION_BUILD_STRING "0.6.0-commit-8ed3164"
 
 /// MAJOR version
 #define NDN_CXX_VERSION_MAJOR 0
