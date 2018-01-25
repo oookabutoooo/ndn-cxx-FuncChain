@@ -1,0 +1,834 @@
+# project ndn-cxx (0.6.0) configured on Thu Jan 25 15:44:24 2018 by
+# waf 1.8.9 (abi 98, python 2070cf0 on darwin)
+# using ./waf configure
+#
+----------------------------------------
+Setting top to
+/Users/kabuto/Documents/ndn-cxx
+----------------------------------------
+Setting out to
+/Users/kabuto/Documents/ndn-cxx/build
+----------------------------------------
+Building static library
+no
+----------------------------------------
+Building shared library
+yes
+----------------------------------------
+Checking for 'clang++' (C++ compiler)
+find program=['clang++'] paths=['/opt/local/bin', '/opt/local/sbin', '/opt/local/bin', '/opt/local/sbin', '/Users/kabuto/.nvm/versions/node/v6.2.0/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Users/kabuto/Paths/unarchiver', '/Users/kabuto/Paths/play_framework/activator-1.3.7-minimal', '/Users/carch/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/usr/local/share/dotnet', '/Library/Frameworks/Mono.framework/Versions/Current/Commands', '/Applications/Wireshark.app/Contents/MacOS'] var='CXX' -> ['/usr/bin/clang++']
+find program=['ar'] paths=['/opt/local/bin', '/opt/local/sbin', '/opt/local/bin', '/opt/local/sbin', '/Users/kabuto/.nvm/versions/node/v6.2.0/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Users/kabuto/Paths/unarchiver', '/Users/kabuto/Paths/play_framework/activator-1.3.7-minimal', '/Users/carch/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/usr/local/share/dotnet', '/Library/Frameworks/Mono.framework/Versions/Current/Commands', '/Applications/Wireshark.app/Contents/MacOS'] var='AR' -> ['/usr/bin/ar']
+/usr/bin/clang++
+----------------------------------------
+Checking C++ compiler version
+8.1.0
+----------------------------------------
+Checking supported CXXFLAGS
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_c415a8f404bb3071c241ebda6b88ed40/test.cpp[0m
+
+['/usr/bin/clang++', '-Werror', '-std=c++11', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_c415a8f404bb3071c241ebda6b88ed40/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c415a8f404bb3071c241ebda6b88ed40/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_c415a8f404bb3071c241ebda6b88ed40/testbuild/testprog']
+-std=c++11
+----------------------------------------
+Checking for std::to_string
+==>
+
+#include <string>
+int
+main()
+{
+  std::string s = std::to_string(0);
+  s = std::to_string(0l);
+  s = std::to_string(0ll);
+  s = std::to_string(0u);
+  s = std::to_string(0ul);
+  s = std::to_string(0ull);
+  s = std::to_string(0.0f);
+  s = std::to_string(0.0);
+  s = std::to_string(0.0l);
+  s.clear();
+}
+
+<==
+[1/1] Compiling [32mbuild/.conf_check_146cf0c7f150a5c178a21a0da2a9d8ed/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_146cf0c7f150a5c178a21a0da2a9d8ed/testbuild/test.cpp.1.o']
+yes
+----------------------------------------------------
+Checking for std::vector::insert with const_iterator
+==>
+
+#include <vector>
+int
+main()
+{
+  std::vector<int> v;
+  std::vector<int>::const_iterator it = v.cbegin();
+
+  v.insert(it, 2);
+  it = v.cend() - 1;
+  v.erase(it);
+}
+
+<==
+[1/1] Compiling [32mbuild/.conf_check_6808a8777dd376b70bd4bcaa23bb4232/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_6808a8777dd376b70bd4bcaa23bb4232/testbuild/test.cpp.1.o']
+yes
+----------------------------------------------------
+Checking for std::is_default_constructible
+==>
+#include <type_traits>
+static_assert(std::is_default_constructible<int>::value, "");
+<==
+[1/1] Compiling [32mbuild/.conf_check_dd27993be27bbcf3678380a5d4ecd857/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_dd27993be27bbcf3678380a5d4ecd857/testbuild/test.cpp.1.o']
+yes
+----------------------------------------------------
+Checking for std::is_nothrow_move_constructible
+==>
+#include <type_traits>
+static_assert(std::is_nothrow_move_constructible<int>::value, "");
+<==
+[1/1] Compiling [32mbuild/.conf_check_942abddadb07a65bc54f1fb8d87916a6/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_942abddadb07a65bc54f1fb8d87916a6/testbuild/test.cpp.1.o']
+yes
+----------------------------------------------------
+Checking for std::is_nothrow_move_assignable
+==>
+#include <type_traits>
+static_assert(std::is_nothrow_move_assignable<int>::value, "");
+<==
+[1/1] Compiling [32mbuild/.conf_check_346e192acb1bc84a5975ac4dedc26ed6/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_346e192acb1bc84a5975ac4dedc26ed6/testbuild/test.cpp.1.o']
+yes
+----------------------------------------------------
+Checking for program 'doxygen'
+not found
+find program=['doxygen'] paths=['/opt/local/bin', '/opt/local/sbin', '/opt/local/bin', '/opt/local/sbin', '/Users/kabuto/.nvm/versions/node/v6.2.0/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Users/kabuto/Paths/unarchiver', '/Users/kabuto/Paths/play_framework/activator-1.3.7-minimal', '/Users/carch/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/usr/local/share/dotnet', '/Library/Frameworks/Mono.framework/Versions/Current/Commands', '/Applications/Wireshark.app/Contents/MacOS'] var='DOXYGEN' -> None
+from /Users/kabuto/Documents/ndn-cxx: Could not find the program ['doxygen']
+----------------------------------------------------
+Checking for program 'tar'
+/usr/bin/tar
+find program=['tar'] paths=['/opt/local/bin', '/opt/local/sbin', '/opt/local/bin', '/opt/local/sbin', '/Users/kabuto/.nvm/versions/node/v6.2.0/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Users/kabuto/Paths/unarchiver', '/Users/kabuto/Paths/play_framework/activator-1.3.7-minimal', '/Users/carch/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/usr/local/share/dotnet', '/Library/Frameworks/Mono.framework/Versions/Current/Commands', '/Applications/Wireshark.app/Contents/MacOS'] var='TAR' -> ['/usr/bin/tar']
+----------------------------------------------------
+Checking for program 'sphinx-build'
+not found
+find program=['sphinx-build'] paths=['/opt/local/bin', '/opt/local/sbin', '/opt/local/bin', '/opt/local/sbin', '/Users/kabuto/.nvm/versions/node/v6.2.0/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Users/kabuto/Paths/unarchiver', '/Users/kabuto/Paths/play_framework/activator-1.3.7-minimal', '/Users/carch/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/usr/local/share/dotnet', '/Library/Frameworks/Mono.framework/Versions/Current/Commands', '/Applications/Wireshark.app/Contents/MacOS'] var='SPHINX_BUILD' -> None
+from /Users/kabuto/Documents/ndn-cxx: Could not find the program ['sphinx-build']
+----------------------------------------------------
+Checking for program 'sh'
+/bin/sh
+find program=['sh'] paths=['/opt/local/bin', '/opt/local/sbin', '/opt/local/bin', '/opt/local/sbin', '/Users/kabuto/.nvm/versions/node/v6.2.0/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Users/kabuto/Paths/unarchiver', '/Users/kabuto/Paths/play_framework/activator-1.3.7-minimal', '/Users/carch/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/usr/local/share/dotnet', '/Library/Frameworks/Mono.framework/Versions/Current/Commands', '/Applications/Wireshark.app/Contents/MacOS'] var='SH' -> ['/bin/sh']
+----------------------------------------------------
+Checking for library pthread
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_a6d2421fbea4b5ea983c5a2e204df269/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_a6d2421fbea4b5ea983c5a2e204df269/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a6d2421fbea4b5ea983c5a2e204df269/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_a6d2421fbea4b5ea983c5a2e204df269/testbuild/testprog', '-lpthread']
+yes
+----------------------------------------------------
+Checking for library rt
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_3b15937edc6a585e593319134aaf036c/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_3b15937edc6a585e593319134aaf036c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3b15937edc6a585e593319134aaf036c/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_3b15937edc6a585e593319134aaf036c/testbuild/testprog', '-lrt']
+err: ld: library not found for -lrt
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+from /Users/kabuto/Documents/ndn-cxx: Test does not build: Traceback (most recent call last):
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Configure.py", line 343, in run_build
+    bld.compile()
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Build.py", line 184, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 4464332048: cxxprogram test.cpp.1.o -> testprog}
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_3b15937edc6a585e593319134aaf036c/testbuild/testprog', '-lrt']
+
+not found
+from /Users/kabuto/Documents/ndn-cxx: The configuration failed
+----------------------------------------------------
+Checking for function getpass
+==>
+#include <unistd.h>
+
+int main(int argc, char **argv) {
+	void *p;
+	(void)argc; (void)argv;
+	p=(void*)(getpass);
+	((void)(p));
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_d875ac17fde24b7cb171122f4463a878/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_d875ac17fde24b7cb171122f4463a878/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d875ac17fde24b7cb171122f4463a878/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_d875ac17fde24b7cb171122f4463a878/testbuild/testprog']
+yes
+----------------------------------------------------
+Checking for rtnetlink
+==>
+#include <linux/if_addr.h>
+#include <linux/if_link.h>
+#include <linux/netlink.h>
+#include <linux/rtnetlink.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_8b73f10be88292cbaae6032e1c725c39/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_8b73f10be88292cbaae6032e1c725c39/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:10: fatal error: 'linux/if_addr.h' file not found
+#include <linux/if_addr.h>
+         ^
+1 error generated.
+
+from /Users/kabuto/Documents/ndn-cxx: Test does not build: Traceback (most recent call last):
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Configure.py", line 343, in run_build
+    bld.compile()
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Build.py", line 184, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 4464527248: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_8b73f10be88292cbaae6032e1c725c39/testbuild/test.cpp.1.o']
+
+not found
+from /Users/kabuto/Documents/ndn-cxx: The configuration failed
+----------------------------------------------------
+Checking for framework CoreFoundation
+==>
+#include <CoreFoundation/CoreFoundation.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_99e48a809a398601f44ad9be1e694384/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_99e48a809a398601f44ad9be1e694384/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_99e48a809a398601f44ad9be1e694384/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_99e48a809a398601f44ad9be1e694384/testbuild/testprog', '-framework', 'CoreFoundation']
+yes
+----------------------------------------------------
+Checking for framework CoreServices
+==>
+#include <CoreServices/CoreServices.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_ef52dcb7a252f582b2dec25010c92424/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_ef52dcb7a252f582b2dec25010c92424/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_ef52dcb7a252f582b2dec25010c92424/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_ef52dcb7a252f582b2dec25010c92424/testbuild/testprog', '-framework', 'CoreServices']
+yes
+----------------------------------------------------
+Checking for framework Security
+==>
+
+#include <CoreFoundation/CoreFoundation.h>
+#include <Security/Security.h>
+#include <Security/SecRandom.h>
+#include <CoreServices/CoreServices.h>
+#include <Security/SecDigestTransform.h>
+int main() {}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_b5800cc939da7136dbaeb02e93399eb6/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_b5800cc939da7136dbaeb02e93399eb6/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b5800cc939da7136dbaeb02e93399eb6/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_b5800cc939da7136dbaeb02e93399eb6/testbuild/testprog', '-framework', 'Security', '-framework', 'CoreFoundation']
+yes
+----------------------------------------------------
+Checking for framework SystemConfiguration
+==>
+
+#include <CoreFoundation/CoreFoundation.h>
+#include <SystemConfiguration/SystemConfiguration.h>
+int main() {}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_e60fa5e3c02d9c5998c16804244aba2e/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_e60fa5e3c02d9c5998c16804244aba2e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e60fa5e3c02d9c5998c16804244aba2e/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_e60fa5e3c02d9c5998c16804244aba2e/testbuild/testprog', '-framework', 'SystemConfiguration', '-framework', 'CoreFoundation']
+yes
+----------------------------------------------------
+Checking for framework Foundation
+==>
+#include <Foundation/Foundation.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_679aeedb815491d108c995409164b8f1/test.mm[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '../test.mm', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_679aeedb815491d108c995409164b8f1/testbuild/test.mm.1.o']
+[2/2] Linking [33mbuild/.conf_check_679aeedb815491d108c995409164b8f1/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.mm.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_679aeedb815491d108c995409164b8f1/testbuild/testprog', '-framework', 'Foundation']
+yes
+----------------------------------------------------
+Checking for framework CoreWLAN
+==>
+#include <CoreWLAN/CoreWLAN.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_966472edd3bef2967bb08bd32d4d0688/test.mm[0m
+
+['/usr/bin/clang++', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '../test.mm', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_966472edd3bef2967bb08bd32d4d0688/testbuild/test.mm.1.o']
+[2/2] Linking [33mbuild/.conf_check_966472edd3bef2967bb08bd32d4d0688/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.mm.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_966472edd3bef2967bb08bd32d4d0688/testbuild/testprog', '-framework', 'CoreWLAN', '-framework', 'Foundation']
+yes
+----------------------------------------------------
+Checking for program 'pkg-config'
+/opt/local/bin/pkg-config
+find program=['pkg-config'] paths=['/opt/local/bin', '/opt/local/sbin', '/opt/local/bin', '/opt/local/sbin', '/Users/kabuto/.nvm/versions/node/v6.2.0/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Library/Frameworks/Python.framework/Versions/3.5/bin', '/Users/kabuto/Paths/unarchiver', '/Users/kabuto/Paths/play_framework/activator-1.3.7-minimal', '/Users/carch/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/usr/local/share/dotnet', '/Library/Frameworks/Mono.framework/Versions/Current/Commands', '/Applications/Wireshark.app/Contents/MacOS'] var='PKGCONFIG' -> ['/opt/local/bin/pkg-config']
+----------------------------------------------------
+Checking for 'sqlite3'
+['/opt/local/bin/pkg-config', '--cflags', '--libs', 'sqlite3']
+out: -I/opt/local/include -L/opt/local/lib -lsqlite3
+
+yes
+----------------------------------------------------
+Checking for OpenSSL lib
+"OpenSSL 1.0.2j-fips  26 Sep 2016"
+----------------------------------------------------
+Checking if OpenSSL library works
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_f88bfcf713e6c68c2e4358db45a71dda/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-I/opt/local/include', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_f88bfcf713e6c68c2e4358db45a71dda/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f88bfcf713e6c68c2e4358db45a71dda/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_f88bfcf713e6c68c2e4358db45a71dda/testbuild/testprog', '-L/opt/local/lib', '-lssl', '-lcrypto']
+yes
+----------------------------------------------------
+Checking boost includes
+1.60.0
+----------------------------------------------------
+Checking boost libs
+Found the boost path in /usr/local/lib with the libraries:
+    /usr/local/lib/libboost_atomic-mt.a
+    /usr/local/lib/libboost_atomic-mt.dylib
+    /usr/local/lib/libboost_chrono-mt.a
+    /usr/local/lib/libboost_chrono-mt.dylib
+    /usr/local/lib/libboost_chrono.a
+    /usr/local/lib/libboost_chrono.dylib
+    /usr/local/lib/libboost_container-mt.a
+    /usr/local/lib/libboost_container-mt.dylib
+    /usr/local/lib/libboost_container.a
+    /usr/local/lib/libboost_container.dylib
+    /usr/local/lib/libboost_context-mt.a
+    /usr/local/lib/libboost_context-mt.dylib
+    /usr/local/lib/libboost_coroutine-mt.a
+    /usr/local/lib/libboost_coroutine-mt.dylib
+    /usr/local/lib/libboost_coroutine.a
+    /usr/local/lib/libboost_coroutine.dylib
+    /usr/local/lib/libboost_date_time-mt.a
+    /usr/local/lib/libboost_date_time-mt.dylib
+    /usr/local/lib/libboost_date_time.a
+    /usr/local/lib/libboost_date_time.dylib
+    /usr/local/lib/libboost_exception-mt.a
+    /usr/local/lib/libboost_exception.a
+    /usr/local/lib/libboost_filesystem-mt.a
+    /usr/local/lib/libboost_filesystem-mt.dylib
+    /usr/local/lib/libboost_filesystem.a
+    /usr/local/lib/libboost_filesystem.dylib
+    /usr/local/lib/libboost_graph-mt.a
+    /usr/local/lib/libboost_graph-mt.dylib
+    /usr/local/lib/libboost_graph.a
+    /usr/local/lib/libboost_graph.dylib
+    /usr/local/lib/libboost_iostreams-mt.a
+    /usr/local/lib/libboost_iostreams-mt.dylib
+    /usr/local/lib/libboost_iostreams.a
+    /usr/local/lib/libboost_iostreams.dylib
+    /usr/local/lib/libboost_locale-mt.a
+    /usr/local/lib/libboost_locale-mt.dylib
+    /usr/local/lib/libboost_log-mt.a
+    /usr/local/lib/libboost_log-mt.dylib
+    /usr/local/lib/libboost_log.a
+    /usr/local/lib/libboost_log.dylib
+    /usr/local/lib/libboost_log_setup-mt.a
+    /usr/local/lib/libboost_log_setup-mt.dylib
+    /usr/local/lib/libboost_log_setup.a
+    /usr/local/lib/libboost_log_setup.dylib
+    /usr/local/lib/libboost_math_c99-mt.a
+    /usr/local/lib/libboost_math_c99-mt.dylib
+    /usr/local/lib/libboost_math_c99.a
+    /usr/local/lib/libboost_math_c99.dylib
+    /usr/local/lib/libboost_math_c99f-mt.a
+    /usr/local/lib/libboost_math_c99f-mt.dylib
+    /usr/local/lib/libboost_math_c99f.a
+    /usr/local/lib/libboost_math_c99f.dylib
+    /usr/local/lib/libboost_math_c99l-mt.a
+    /usr/local/lib/libboost_math_c99l-mt.dylib
+    /usr/local/lib/libboost_math_c99l.a
+    /usr/local/lib/libboost_math_c99l.dylib
+    /usr/local/lib/libboost_math_tr1-mt.a
+    /usr/local/lib/libboost_math_tr1-mt.dylib
+    /usr/local/lib/libboost_math_tr1.a
+    /usr/local/lib/libboost_math_tr1.dylib
+    /usr/local/lib/libboost_math_tr1f-mt.a
+    /usr/local/lib/libboost_math_tr1f-mt.dylib
+    /usr/local/lib/libboost_math_tr1f.a
+    /usr/local/lib/libboost_math_tr1f.dylib
+    /usr/local/lib/libboost_math_tr1l-mt.a
+    /usr/local/lib/libboost_math_tr1l-mt.dylib
+    /usr/local/lib/libboost_math_tr1l.a
+    /usr/local/lib/libboost_math_tr1l.dylib
+    /usr/local/lib/libboost_prg_exec_monitor-mt.a
+    /usr/local/lib/libboost_prg_exec_monitor-mt.dylib
+    /usr/local/lib/libboost_prg_exec_monitor.a
+    /usr/local/lib/libboost_prg_exec_monitor.dylib
+    /usr/local/lib/libboost_program_options-mt.a
+    /usr/local/lib/libboost_program_options-mt.dylib
+    /usr/local/lib/libboost_program_options.a
+    /usr/local/lib/libboost_program_options.dylib
+    /usr/local/lib/libboost_random-mt.a
+    /usr/local/lib/libboost_random-mt.dylib
+    /usr/local/lib/libboost_random.a
+    /usr/local/lib/libboost_random.dylib
+    /usr/local/lib/libboost_regex-mt.a
+    /usr/local/lib/libboost_regex-mt.dylib
+    /usr/local/lib/libboost_regex.a
+    /usr/local/lib/libboost_regex.dylib
+    /usr/local/lib/libboost_serialization-mt.a
+    /usr/local/lib/libboost_serialization-mt.dylib
+    /usr/local/lib/libboost_serialization.a
+    /usr/local/lib/libboost_serialization.dylib
+    /usr/local/lib/libboost_signals-mt.a
+    /usr/local/lib/libboost_signals-mt.dylib
+    /usr/local/lib/libboost_signals.a
+    /usr/local/lib/libboost_signals.dylib
+    /usr/local/lib/libboost_system-mt.a
+    /usr/local/lib/libboost_system-mt.dylib
+    /usr/local/lib/libboost_system.a
+    /usr/local/lib/libboost_system.dylib
+    /usr/local/lib/libboost_test_exec_monitor-mt.a
+    /usr/local/lib/libboost_test_exec_monitor.a
+    /usr/local/lib/libboost_thread-mt.a
+    /usr/local/lib/libboost_thread-mt.dylib
+    /usr/local/lib/libboost_timer-mt.a
+    /usr/local/lib/libboost_timer-mt.dylib
+    /usr/local/lib/libboost_timer.a
+    /usr/local/lib/libboost_timer.dylib
+    /usr/local/lib/libboost_type_erasure-mt.a
+    /usr/local/lib/libboost_type_erasure-mt.dylib
+    /usr/local/lib/libboost_type_erasure.a
+    /usr/local/lib/libboost_type_erasure.dylib
+    /usr/local/lib/libboost_unit_test_framework-mt.a
+    /usr/local/lib/libboost_unit_test_framework-mt.dylib
+    /usr/local/lib/libboost_unit_test_framework.a
+    /usr/local/lib/libboost_unit_test_framework.dylib
+    /usr/local/lib/libboost_wave-mt.a
+    /usr/local/lib/libboost_wave-mt.dylib
+    /usr/local/lib/libboost_wserialization-mt.a
+    /usr/local/lib/libboost_wserialization-mt.dylib
+    /usr/local/lib/libboost_wserialization.a
+    /usr/local/lib/libboost_wserialization.dylib
+Trying pattern boost_system(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_system-mt-1_60.dylib$
+Trying pattern boost_system(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_system-mt.dylib$
+Found boost lib libboost_system-mt.dylib
+Trying pattern boost_filesystem(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_filesystem-mt-1_60.dylib$
+Trying pattern boost_filesystem(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_filesystem-mt.dylib$
+Found boost lib libboost_filesystem-mt.dylib
+Trying pattern boost_date_time(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_date_time-mt-1_60.dylib$
+Trying pattern boost_date_time(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_date_time-mt.dylib$
+Found boost lib libboost_date_time-mt.dylib
+Trying pattern boost_iostreams(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_iostreams-mt-1_60.dylib$
+Trying pattern boost_iostreams(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_iostreams-mt.dylib$
+Found boost lib libboost_iostreams-mt.dylib
+Trying pattern boost_regex(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_regex-mt-1_60.dylib$
+Trying pattern boost_regex(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_regex-mt.dylib$
+Found boost lib libboost_regex-mt.dylib
+Trying pattern boost_program_options(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_program_options-mt-1_60.dylib$
+Trying pattern boost_program_options(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_program_options-mt.dylib$
+Found boost lib libboost_program_options-mt.dylib
+Trying pattern boost_chrono(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_chrono-mt-1_60.dylib$
+Trying pattern boost_chrono(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_chrono-mt.dylib$
+Found boost lib libboost_chrono-mt.dylib
+Trying pattern boost_thread(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_thread-mt-1_60.dylib$
+Trying pattern boost_thread(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_thread-mt.dylib$
+Found boost lib libboost_thread-mt.dylib
+Trying pattern boost_log(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_log-mt-1_60.dylib$
+Trying pattern boost_log(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_log-mt.dylib$
+Found boost lib libboost_log-mt.dylib
+Trying pattern boost_log_setup(-xgcc[0-9]{0,3})-mt-1_60.dylib$
+Trying pattern boost_log_setup-mt-1_60.dylib$
+Trying pattern boost_log_setup(-xgcc[0-9]{0,3})-mt.dylib$
+Trying pattern boost_log_setup-mt.dylib$
+Found boost lib libboost_log_setup-mt.dylib
+ok
+----------------------------------------------------
+Checking the flags needed to use pthreads
+==>
+
+#include <pthread.h>
+static void* f(void*) { return 0; }
+int main() {
+	pthread_t th;
+	pthread_attr_t attr;
+	pthread_attr_init(&attr);
+	pthread_create(&th, &attr, &f, 0);
+	pthread_join(th, 0);
+	pthread_cleanup_push(0, 0);
+	pthread_cleanup_pop(0);
+	pthread_attr_destroy(&attr);
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_da0d1343e9da8e489b4889689bd600fd/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-I/usr/local/include', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_da0d1343e9da8e489b4889689bd600fd/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_da0d1343e9da8e489b4889689bd600fd/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_da0d1343e9da8e489b4889689bd600fd/testbuild/testprog', '-L/usr/local/lib', '-L/usr/local/lib', '-lboost_system-mt', '-lboost_filesystem-mt', '-lboost_date_time-mt', '-lboost_iostreams-mt', '-lboost_regex-mt', '-lboost_program_options-mt', '-lboost_chrono-mt', '-lboost_thread-mt', '-lboost_log-mt', '-lboost_log_setup-mt']
+----------------------------------------------------
+Checking for boost linkage
+==>
+
+#include <boost/system/error_code.hpp>
+int main() { boost::system::error_code c; }
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_2adc1824630cad1c873fa831eab42323/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-I/usr/local/include', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_2adc1824630cad1c873fa831eab42323/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2adc1824630cad1c873fa831eab42323/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_2adc1824630cad1c873fa831eab42323/testbuild/testprog', '-L/usr/local/lib', '-L/usr/local/lib', '-lboost_system-mt', '-lboost_filesystem-mt', '-lboost_date_time-mt', '-lboost_iostreams-mt', '-lboost_regex-mt', '-lboost_program_options-mt', '-lboost_chrono-mt', '-lboost_thread-mt', '-lboost_log-mt', '-lboost_log_setup-mt']
+==>
+
+#include <boost/thread.hpp>
+int main() { boost::thread t; }
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_f8f773d666cfedc7adb69464457313eb/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-I/usr/local/include', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_f8f773d666cfedc7adb69464457313eb/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f8f773d666cfedc7adb69464457313eb/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_f8f773d666cfedc7adb69464457313eb/testbuild/testprog', '-L/usr/local/lib', '-L/usr/local/lib', '-lboost_system-mt', '-lboost_filesystem-mt', '-lboost_date_time-mt', '-lboost_iostreams-mt', '-lboost_regex-mt', '-lboost_program_options-mt', '-lboost_chrono-mt', '-lboost_thread-mt', '-lboost_log-mt', '-lboost_log_setup-mt']
+==>
+
+#include <boost/log/trivial.hpp>
+#include <boost/log/utility/setup/console.hpp>
+#include <boost/log/utility/setup/common_attributes.hpp>
+int main() {
+	using namespace boost::log;
+	add_common_attributes();
+	add_console_log(std::clog, keywords::format = "%Message%");
+	BOOST_LOG_TRIVIAL(debug) << "log is working" << std::endl;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_3bcfdd45e749cd121583fb904d19d2b4/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-I/usr/local/include', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DBOOST_LOG_DYN_LINK', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_3bcfdd45e749cd121583fb904d19d2b4/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3bcfdd45e749cd121583fb904d19d2b4/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_3bcfdd45e749cd121583fb904d19d2b4/testbuild/testprog', '-L/usr/local/lib', '-L/usr/local/lib', '-lboost_system-mt', '-lboost_filesystem-mt', '-lboost_date_time-mt', '-lboost_iostreams-mt', '-lboost_regex-mt', '-lboost_program_options-mt', '-lboost_chrono-mt', '-lboost_thread-mt', '-lboost_log-mt', '-lboost_log_setup-mt']
+ok
+----------------------------------------------------
+Checking supported CXXFLAGS
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_b6996ee0949e9af661162d774677955f/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-O2', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_b6996ee0949e9af661162d774677955f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b6996ee0949e9af661162d774677955f/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_b6996ee0949e9af661162d774677955f/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_16386be27f6f55e7864f8193aa9ea63b/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-g', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_16386be27f6f55e7864f8193aa9ea63b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_16386be27f6f55e7864f8193aa9ea63b/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_16386be27f6f55e7864f8193aa9ea63b/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_70157bab20f257ad1ac68fc4b01349fb/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-pedantic', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_70157bab20f257ad1ac68fc4b01349fb/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_70157bab20f257ad1ac68fc4b01349fb/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_70157bab20f257ad1ac68fc4b01349fb/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_aa8eafd82ad466138542905df39ee5b9/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-Wall', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_aa8eafd82ad466138542905df39ee5b9/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_aa8eafd82ad466138542905df39ee5b9/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_aa8eafd82ad466138542905df39ee5b9/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_14e8453ee1586345886521636f898462/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-Wextra', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_14e8453ee1586345886521636f898462/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_14e8453ee1586345886521636f898462/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_14e8453ee1586345886521636f898462/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_f3cd11bc13f81eb984a01433f6f53ddc/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-Wnon-virtual-dtor', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_f3cd11bc13f81eb984a01433f6f53ddc/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f3cd11bc13f81eb984a01433f6f53ddc/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_f3cd11bc13f81eb984a01433f6f53ddc/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_fc26dd49b2d646400d8c85efdc058c45/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-Wno-unused-parameter', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_fc26dd49b2d646400d8c85efdc058c45/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_fc26dd49b2d646400d8c85efdc058c45/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_fc26dd49b2d646400d8c85efdc058c45/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_7c65f1e05990ae8313688c3711ee2fd9/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-fcolor-diagnostics', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_7c65f1e05990ae8313688c3711ee2fd9/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_7c65f1e05990ae8313688c3711ee2fd9/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_7c65f1e05990ae8313688c3711ee2fd9/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_750f096f5ab4473340a0b390b212ff9c/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-Wextra-semi', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_750f096f5ab4473340a0b390b212ff9c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_750f096f5ab4473340a0b390b212ff9c/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_750f096f5ab4473340a0b390b212ff9c/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_7e9a500592e90eea0bbe0d7eb290832e/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-Wundefined-func-template', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_7e9a500592e90eea0bbe0d7eb290832e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_7e9a500592e90eea0bbe0d7eb290832e/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_7e9a500592e90eea0bbe0d7eb290832e/testbuild/testprog']
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_e4ee5d55dafcd34d725c7bd23bdf44f4/test.cpp[0m
+
+['/usr/bin/clang++', '-std=c++11', '-Werror', '-Wno-unused-local-typedef', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_e4ee5d55dafcd34d725c7bd23bdf44f4/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e4ee5d55dafcd34d725c7bd23bdf44f4/testbuild/testprog[0m
+
+['/usr/bin/clang++', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_e4ee5d55dafcd34d725c7bd23bdf44f4/testbuild/testprog']
+-O2 -g -pedantic -Wall -Wextra -Wnon-virtual-dtor -Wno-unused-parameter -fcolor-diagnostics -Wextra-semi -Wundefined-func-template -Wno-unused-local-typedef
+----------------------------------------------------
+Checking supported LINKFLAGS
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_cc22f7169c81bc0116d8bf1647f47a11/test.cpp[0m
+
+['/usr/bin/clang++', '-O2', '-g', '-pedantic', '-Wall', '-Wextra', '-Wnon-virtual-dtor', '-Wno-unused-parameter', '-fcolor-diagnostics', '-Wextra-semi', '-Wundefined-func-template', '-Wno-unused-local-typedef', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_cc22f7169c81bc0116d8bf1647f47a11/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_cc22f7169c81bc0116d8bf1647f47a11/testbuild/testprog[0m
+
+['/usr/bin/clang++', '-Werror', '-fuse-ld=gold', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_cc22f7169c81bc0116d8bf1647f47a11/testbuild/testprog']
+err: clang: error: invalid linker name in argument '-fuse-ld=gold'
+
+from /Users/kabuto/Documents/ndn-cxx: Test does not build: Traceback (most recent call last):
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Configure.py", line 343, in run_build
+    bld.compile()
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Build.py", line 184, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 4465185488: cxxprogram test.cpp.1.o -> testprog}
+['/usr/bin/clang++', '-Werror', '-fuse-ld=gold', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_cc22f7169c81bc0116d8bf1647f47a11/testbuild/testprog']
+
+from /Users/kabuto/Documents/ndn-cxx: The configuration failed
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_5c8ae127bcda08cc0e86e98119162b64/test.cpp[0m
+
+['/usr/bin/clang++', '-O2', '-g', '-pedantic', '-Wall', '-Wextra', '-Wnon-virtual-dtor', '-Wno-unused-parameter', '-fcolor-diagnostics', '-Wextra-semi', '-Wundefined-func-template', '-Wno-unused-local-typedef', '-std=c++11', '-DHAVE_STD_TO_STRING=1', '-DHAVE_VECTOR_INSERT_ERASE_CONST_ITERATOR=1', '-DHAVE_IS_DEFAULT_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_CONSTRUCTIBLE=1', '-DHAVE_IS_NOTHROW_MOVE_ASSIGNABLE=1', '-DHAVE_PTHREAD=1', '-DHAVE_GETPASS=1', '-DHAVE_COREFOUNDATION_COREFOUNDATION_H=1', '-DHAVE_CORESERVICES_CORESERVICES_H=1', '-DHAVE_SECURITY_SECURITY_H=1', '-DHAVE_SYSTEMCONFIGURATION_SYSTEMCONFIGURATION_H=1', '-DHAVE_FOUNDATION_FOUNDATION_H=1', '-DHAVE_COREWLAN_COREWLAN_H=1', '-DHAVE_OSX_FRAMEWORKS=1', '-DHAVE_SQLITE3=1', '-DHAVE_OPENSSL=1', '-DWITH_OSX_KEYCHAIN=1', '../test.cpp', '-c', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_5c8ae127bcda08cc0e86e98119162b64/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_5c8ae127bcda08cc0e86e98119162b64/testbuild/testprog[0m
+
+['/usr/bin/clang++', '-Werror', '-Wl,-O1', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_5c8ae127bcda08cc0e86e98119162b64/testbuild/testprog']
+err: ld: unknown option: -O1
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+from /Users/kabuto/Documents/ndn-cxx: Test does not build: Traceback (most recent call last):
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Configure.py", line 343, in run_build
+    bld.compile()
+  File "/Users/kabuto/Documents/ndn-cxx/.waf-1.8.9-849024857bd41c3cf8e87dc01ecf79b0/waflib/Build.py", line 184, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 4465228496: cxxprogram test.cpp.1.o -> testprog}
+['/usr/bin/clang++', '-Werror', '-Wl,-O1', 'test.cpp.1.o', '-o', '/Users/kabuto/Documents/ndn-cxx/build/.conf_check_5c8ae127bcda08cc0e86e98119162b64/testbuild/testprog']
+
+from /Users/kabuto/Documents/ndn-cxx: The configuration failed
